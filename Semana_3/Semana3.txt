@@ -1,0 +1,110 @@
+select * from dba_tab_cols
+
+select * from dba_objects
+
+-- SCRIP PARA CREA ESTRUCTURA DE UNA BASE DE DATOS DE STAGING
+select case  when  fila = 1  then 'create table NORTHWIND.'||tabla||'('
+else columna end columna  from (
+select  c.table_name tabla,column_name||' '||data_type||
+'('||c.data_length||'),'  columna,
+row_number() over( partition by  c.table_name order by column_name ) fila
+from dba_tab_cols c 
+inner join dba_objects o
+on c.owner=o.owner
+and c.table_name =o.object_name
+where  c.owner='NORTHWIND'
+) cp
+
+
+sELECT * FROM user_tables
+
+
+
+
+
+
+SELECT 
+create table NORTHWIND.CATEGORIES(
+CATEGORY_NAME varchar(15),
+DESCRIPTION varchar(2000),
+PICTURE varchar(255))
+
+create table NORTHWIND.CUSTOMERS(
+CITY varchar(15),
+COMPANY_NAME varchar(40),
+CONTACT_NAME varchar(30),
+CONTACT_TITLE varchar(30),
+COUNTRY varchar(15),
+CUSTOMER_CODE varchar(5),
+CUSTOMER_ID numeric(22),
+FAX varchar(24),
+PHONE varchar(24),
+POSTAL_CODE varchar(10),
+REGION varchar(15))
+
+create table NORTHWIND.EMPLOYEES(
+BIRTHDATE DATE,
+CITY varchar(15),
+COUNTRY varchar(15),
+EMPLOYEE_ID numeric(22),
+EXTENSION varchar(4),
+FIRSTNAME varchar(10),
+HIREDATE DATE,
+HOME_PHONE varchar(24),
+LASTNAME varchar(20),
+NOTES varchar(2000),
+PHOTO varchar(255),
+POSTAL_CODE varchar(10),
+REGION varchar(15),
+REPORTS_TO numeric(22),
+TITLE varchar(30),
+TITLE_OF_COURTESY varchar(25))
+
+create table NORTHWIND.ORDER_DETAILS(
+ORDER_ID numeric(22),
+PRODUCT_ID numeric(22),
+QUANTITY numeric(22),
+UNIT_PRICE numeric(22))
+
+create table NORTHWIND.ORDERS(
+EMPLOYEE_ID numeric(22),
+FREIGHT numeric(22),
+ORDER_DATE DATE,
+ORDER_ID numeric(22),
+REQUIRED_DATE DATE,
+SHIP_ADDRESS varchar(60),
+SHIP_CITY varchar(15),
+SHIP_COUNTRY varchar(15),
+SHIP_NAME varchar(40),
+SHIPPED_DATE DATE,
+SHIP_POSTAL_CODE varchar(10),
+SHIP_REGION varchar(15),
+SHIP_VIA numeric(22))
+
+create table NORTHWIND.PRODUCTS(
+DISCONTINUED CHAR(1),
+PRODUCT_ID numeric(22),
+PRODUCT_NAME varchar(40),
+QUANTITY_PER_UNIT varchar(20),
+REORDER_LEVEL numeric(22),
+SUPPLIER_ID numeric(22),
+UNIT_PRICE numeric(22),
+UNITS_IN_STOCK numeric(22),
+UNITS_ON_ORDER numeric(22))
+
+create table NORTHWIND.SHIPPERS(
+PHONE varchar(24),
+SHIPPER_ID numeric(22))
+
+create table NORTHWIND.SUPPLIERS(
+CITY varchar(15),
+COMPANY_NAME varchar(40),
+CONTACT_NAME varchar(30),
+CONTACT_TITLE varchar(30),
+COUNTRY varchar(15),
+FAX varchar(24),
+HOME_PAGE varchar(500),
+PHONE varchar(24),
+POSTAL_CODE varchar(10),
+REGION varchar(15),
+SUPPLIER_ID numeric(22))
