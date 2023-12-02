@@ -1,0 +1,22 @@
+Los KPIs, o Indicadores Clave de Rendimiento (Key Performance Indicators, en inglés), 
+son métricas cuantificables utilizadas para evaluar el rendimiento de una organización, 
+proyecto, proceso o empleado en relación con los objetivos establecidos. Estos indicadores 
+proporcionan una medida clara y específica del progreso hacia metas predeterminadas, 
+permitiendo a las empresas tomar decisiones informadas y ajustar estrategias según sea necesario. 
+Los KPIs varían según el contexto y los objetivos, pudiendo incluir métricas financieras, operativas, 
+de satisfacción del cliente, entre otras, con el objetivo de medir el éxito y la eficacia en diferentes 
+áreas de una entidad.
+
+Ejemplo:
+
+KPI
+Crecimiento en Ventas por Ciudad:
+
+-Específico: Medir el aumento porcentual de las ventas en relación con el mes anterior.
+-Medible: Se utiliza el monto de ventas colocado mensualmente.
+-Alcanzable: Incrementar las ventas en un 2% con respecto al inicio de año.
+-Relevante: Relacionado directamente con el rendimiento de ventas.
+-Con límite de tiempo: Evaluar el crecimiento en un período mensual.
+-Importancia del Enfoque: Medir las ventas totales desglosadas por ciudad en un mes específico 
+s a nuestras ventas y dirigir nuestros esfuerzos de marketing.
+-Fórmula de Medición:(VentasMesActual−VentasMesAnt
